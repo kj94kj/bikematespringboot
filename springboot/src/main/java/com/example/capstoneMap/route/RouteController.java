@@ -52,4 +52,9 @@ public class RouteController {
     public ResponseEntity<List<RouteDto>> getRoutesByRecordUserId(@PathVariable Long userId){
     	return routeService.getRoutesByRecordUserId(userId);
     }
+
+        @GetMapping("/health")
+        public String healthCheck() {
+            return "Server is running!";
+        }
 }
